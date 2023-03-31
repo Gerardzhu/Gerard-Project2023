@@ -11,4 +11,6 @@ unsigned char main()
     unsigned char ret;
     ret = testfunc;
     printf("%d\n", ret);
+    ret = testfunc();
+    printf("%d\n", ret);
 }
