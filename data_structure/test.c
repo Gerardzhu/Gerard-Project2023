@@ -1,22 +1,16 @@
 #include <stdio.h>
 
-unsigned char testfunc(void)
-{
-    unsigned char ted = 2;
-    return ted;
-}
+#define RESULT 0 // 定义 RESULT 为 0
+#ifndef PI 
+#define PI 3.1416 
+#endif
 
-unsigned char main()
+int main(void)
 {
-    unsigned char ret;
-    ret = testfunc;
-    printf("%d\n", ret);
-<<<<<<< HEAD
-    ret = testfunc();
-    printf("%d\n", ret);
-=======
-    unsigned char error;
-    error = testfunc();
-    printf("%d\n", error);
->>>>>>> master
+#if RESULT // 或者 0==RESULT
+    printf("It's False!\n");
+#else
+    printf("It's True!, pi = %f\n", PI);
+#endif // 标志结束#if
+    return 0;
 }
